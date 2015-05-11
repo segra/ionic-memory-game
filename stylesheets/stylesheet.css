@@ -315,6 +315,14 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
+#nav {
+  position: absolute;
+  width: 410px;
+  z-index: 10;
+  bottom: -45px;
+  left: 0;
+  height: 70px;
+}
 #downloads {
   position: absolute;
   width: 210px;
