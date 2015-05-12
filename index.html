@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-    <title>Ionic-memory-game</title>
+    <title>ionic-memory-game</title>
   </head>
 
   <body>
@@ -23,10 +23,10 @@
           <h2 id="project_tagline"></h2>
 
           <section id="nav">
-            <ul class="nav nav-pills">
-              <li class="active"><a href="index.html">iPhone 5</a></li>
-              <li><a href="iphone4.html">iPhone 4</a></li>
-              <li><a href="ipad.html">iPad</a></li>
+            <ul class="nav nav-pills" role="tablist" id="myTab">
+              <li role="presentation" class="active"><a href="#iphone5" aria-controls="iphone5" role="tab" data-toggle="tab">iPhone 5</a></li>
+              <li role="presentation"><a href="#iphone4" aria-controls="iphone4" role="tab" data-toggle="tab">iPhone 4</a></li>
+              <li role="presentation"><a href="#ipad" aria-controls="ipad" role="tab" data-toggle="tab">iPad</a></li>
             </ul>
           </section>
 
@@ -39,17 +39,18 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+
       <section id="main_content" class="inner">
 
-        <div class="container">
-
-          <div style="background-image:url('img/iphone5.png');background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 145px 0px 0px 27px;width:375px;height:806px;">
-            <iframe src="www" width="320" height="550"></iframe>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" style="background-image:url('images/iphone5.png');background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 145px 0px 0px 27px;width:375px;height:806px;" id="iphone5"><iframe src="www/index.html" width="320" height="550"></iframe></div>
+            <div role="tabpanel" class="tab-pane" style="background-image:url('images/iphone4.png');background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 170px 0px 0px 56px;width:429px;height:899px;" id="iphone4"><iframe src="www/index.html" width="320" height="550"></iframe></div>
+            <div role="tabpanel" class="tab-pane" style="background-image:url('images/ipad.png');background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 139px 0px 0px 58px;width:886px;height:1300px;" id="ipad"><iframe src="www/index.html" width="320" height="550"></iframe></div>
           </div>
-
-        </div> <!-- /container -->
-
+            
       </section>
+
     </div>
 
     <!-- FOOTER  -->
@@ -60,7 +61,16 @@
       </footer>
     </div>
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#myTab a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        })
+      });
+    </script>
 
   </body>
 </html>
