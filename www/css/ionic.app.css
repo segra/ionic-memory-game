@@ -8226,7 +8226,7 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   .memory-game-easy .button .icon:before, .memory-game-easy .button.icon:before {
     font-size: 60px; } }
 
-@media only screen and (min-device-width: 768px) {
+/*@media only screen and (min-device-width: 768px) {
   .home-menu > .col {
     width: 37%;
     padding: 20px; }
@@ -8246,3 +8246,4 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
     font-size: 70px; }
   .memory-game-easy .button .icon:before, .memory-game-easy .button.icon:before {
     font-size: 90px; } }
+*/
